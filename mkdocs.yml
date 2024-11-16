@@ -1,1 +1,57 @@
-site_name: My Docs
+site_name: 'gptandi.com'
+site_author: 'gptandi.com'
+site_description: 'Notes about my hobbies and other things I find interesting.'
+site_url: 'https://gptandi.com/'
+copyright: 'Copyright &copy; 2024 gptandi.com'
+theme:
+  name: 'material'
+  custom_dir: 'overrides'
+  icon:
+    edit: 'material/pencil'
+    view: 'material/eye'
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.tracking
+    - navigation.instant
+    - navigation.footer
+    - navigation.indexes
+  generator: false
+plugins:
+  - search
+  - tags
+  - blog:
+      blog_dir: .
+      post_dir: posts
+      post_date_format: medium
+      post_url_format: "{slug}"
+      categories: true
+      pagination: true
+  - blog:
+      enabled: true
+      blog_dir: books
+      post_dir: "{blog}"
+      post_date_format: medium
+      post_url_format: "{slug}"
+      categories: true
+      pagination: true
+extra:
+  analytics:
+    provider: 'google'
+    property: 'G-686PKP2V2V'
+extra_css:
+  - 'stylesheets/extra.css'
+extra_javascript:
+  - 'javascripts/mathjax.js'
+  - 'javascripts/analytics.js'
+  - 'https://polyfill.io/v3/polyfill.min.js?features=es6'
+  - 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+{% block content %}
+<article class="md-content__inner md-typeset">
+    {% if page.meta.title %}
+    <h1>{{ page.meta.title }}</h1>
+    {% endif %}
+
+    {% if page.meta.description %}
+    <p>{{ page.meta.description }}</p>
+    {% endif %}
+
+    {{ page.content }}
+</article>
+{% endblock %}

@@ -1,0 +1,49 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.post-card {
+    background-color: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.post-card a {
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-card h3 {
+    margin: 0 0 1rem 0;
+    color: var(--md-typeset-color);
+    font-size: 1.25rem;
+}
+
+.post-card p {
+    color: var(--md-default-fg-color--light);
+    margin: 0 0 1rem 0;
+}
+
+.post-meta {
+    font-size: 0.875rem;
+    color: var(--md-default-fg-color--light);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.post-categories {
+    display: flex;
+    gap: 0.5rem;
+}
